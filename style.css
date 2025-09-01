@@ -27,3 +27,26 @@ h1 {
   align-items: center;
   gap: 16px;
 }
+
+.nav-button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: inherit;          /* use the surrounding text color */
+  font: inherit;           /* use the surrounding font */
+  line-height: inherit;
+  cursor: pointer;
+  display: inline;         /* sits inline with text */
+  text-decoration: underline; /* or 'none' if you don’t want underline */
+  appearance: none;
+}
+
+.nav-button:hover {
+  opacity: 0.85;           /* subtle hover */
+}
+
+.nav-button:focus-visible {
+  outline: 2px solid currentColor; /* keep an accessible focus ring */
+  outline-offset: 2px;
+}
