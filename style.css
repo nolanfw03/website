@@ -4,27 +4,24 @@ body {
 }
 
 .top-banner {
-    background-color: #34495e;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    font-family: Arial, sans-serif;
-  }
+  position: relative;
+  width: 100%;
+  background-color: #34495e;
+  color: white;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
 
-  .top-banner .logo {
-    font-size: 22px;
-    font-weight: bold;
-  }
+.left {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-  .top-banner nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
-  }
-
-  .top-banner nav a:hover {
-    text-decoration: underline;
-  }
+.right {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
