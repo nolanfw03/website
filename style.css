@@ -3,112 +3,28 @@ body {
   text-align: center;
 }
 
-/*************/
-/* Variables */
-/*************/
+.top-banner {
+    background-color: #34495e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    font-family: Arial, sans-serif;
+  }
 
-.map-container {
-  --city-radius: 2rem;
-  --city-sign-color-back: #00c080;
-  --city-sign-color-font: #fff;
-  --city-pin-size-font: 1.2rem;
-}
+  .top-banner .logo {
+    font-size: 22px;
+    font-weight: bold;
+  }
 
-/**********/
-/* Styles */
-/**********/
+  .top-banner nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+  }
 
-/* Container */
-.map-container {
-  border-radius: 0.5em;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-  line-height: 1;
-  min-width: 15rem;
-  position: relative;
-  width: 50%;
-  aspect-ratio: 1;
-}
-
-/* Map - Background */
-.map-background {
-  border-radius: inherit;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-/* Map - Cities */
-.map-cities {
-  width: 100%;
-}
-.map-city {
-  border-radius: var(--city-radius);
-  left: calc(var(--x) * 1% - var(--city-radius));
-  padding: var(--city-radius);
-  position: absolute;
-  top: calc(var(--y) * 1% - var(--city-radius));
-}
-.map-city::after,
-.map-city::before {
-  font-size: var(--city-pin-size-font);
-}
-.map-city::before {
-  content: "•";
-  left: calc(-50% + var(--city-radius));
-  position: absolute;
-  top: calc(-0.65em + var(--city-radius));
-  text-align: center;
-  text-shadow: 0 1px 1px #000;
-  width: 100%;
-}
-.map-city::after {
-  clip-path: inset(-0.5em 0 0 0);
-  content: "📍";
-  left: calc(-50% + var(--city-radius));
-  position: absolute;
-  top: calc(-1em + var(--city-radius));
-  text-align: center;
-  transition: all 300ms ease-out;
-  width: 100%;
-  z-index: var(--y);
-}
-
-/* Map - Sign */
-.map-city__label {
-  display: none;
-  left: calc(-5em + 50%);
-  position: absolute;
-  text-align: center;
-  width: 10em;
-  z-index: 999;
-}
-.map-city__sign {
-  align-items: center;
-  background-color: var(--city-sign-color-back);
-  border-radius: 0.2rem;
-  border: 0.15em solid var(--city-sign-color-font);
-  box-shadow: 0 0 3px #000;
-  color: var(--city-sign-color-font);
-  column-gap: 0.3em;
-  display: flex;
-  font-weight: 700;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 100%;
-  overflow: hidden;
-  padding: 0.4em 0.6em 0.4em 0.3em;
-  text-overflow: ellipsis;
-  text-wrap: nowrap;
-  width: max-content;
-}
-
-/************/
-/* Tracking */
-/************/
-
-/* Map - Cities */
-.map-city:hover::after {
-  clip-path: inset(-0.5em 0 0.5em 0);
-  transform: translateY(0.5em);
-}
+  .top-banner nav a:hover {
+    text-decoration: underline;
+  }
