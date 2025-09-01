@@ -102,9 +102,6 @@ body {
   text-wrap: nowrap;
   width: max-content;
 }
-.map-city__sign::before {
-  content: attr(data-icon);
-}
 
 /************/
 /* Tracking */
@@ -114,98 +111,4 @@ body {
 .map-city:hover::after {
   clip-path: inset(-0.5em 0 0.5em 0);
   transform: translateY(0.5em);
-}
-
-/* Map - Sign */
-.map-city:hover .map-city__label {
-  animation: fadein 300ms forwards ease-out;
-  display: block;
-}
-
-.map-city:hover .map-city__sign.anim::before {
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-}
-.map-city:hover .map-city__sign.anim-grow::before {
-  animation-name: grow;
-  animation-timing-function: ease-in;
-}
-.map-city:hover .map-city__sign.anim-slidein::before {
-  animation-name: slidein;
-  animation-timing-function: ease-out;
-}
-
-/**************/
-/* Animations */
-/**************/
-
-/* Fade in from top */
-@keyframes fadein {
-  0% {
-    opacity: 0;
-    top: calc(var(--city-radius));
-  }
-
-  100% {
-    opacity: 1;
-    top: calc(var(--city-radius) + var(--city-pin-size-font) / 2);
-  }
-}
-
-/* Grow from the ground */
-@keyframes grow {
-  0% {
-    transform: translate(0, 200%);
-  }
-
-  10% {
-    transform: translate(5%, 180%);
-  }
-
-  20% {
-    transform: translate(-10%, 160%);
-  }
-
-  30% {
-    transform: translate(15%, 140%);
-  }
-
-  40% {
-    transform: translate(-5%, 120%);
-  }
-
-  50% {
-    transform: translate(10%, 100%);
-  }
-
-  60% {
-    transform: translate(-15%, 80%);
-  }
-
-  70% {
-    transform: translate(5%, 60%);
-  }
-
-  80% {
-    transform: translate(0, 40%);
-  }
-
-  90% {
-    transform: translate(0, 20%);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-/* Slide in from left */
-@keyframes slidein {
-  0% {
-    transform: translateX(-200%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
 }
