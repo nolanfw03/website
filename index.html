@@ -14,12 +14,23 @@
     <script type="text/babel" data-presets="env,react">
       function App() {
         return (
-          <header id="top-banner">
-            <h1 className="nav-button">Website</h1>
-            <div className="right">
-              <button type="button" className="nav-button">Settings</button>
-            </div>
-          </header>
+          <>
+            <header id="top-banner">
+              <h1 className="nav-button">Website</h1>
+              <div className="right">
+                <button type="button" className="nav-button">Settings</button>
+              </div>
+            </header>
+            
+            <main id="content">
+              <div id="country-select">
+                <button type="button" className="nav-button">United States</button>
+                <button type="button" className="nav-button">Japan</button>
+              </div>
+            </main>
+
+            <footer id="bottom-banner"></footer>
+          </>
         );
       }
 

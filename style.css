@@ -41,10 +41,15 @@ h1 {
 }
 
 .nav-button:hover {
-  opacity: 0.85;
+  color: #FFFAEB;
 }
 
-.nav-button:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+#bottom-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7D2D0A;
+  color: #fff;
+  padding: 15px 30px;
+  text-align: left;
 }
