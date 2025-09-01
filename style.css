@@ -10,18 +10,15 @@ body {
   color: white;
   padding: 15px;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .left {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  float: left;
 }
 
 .right {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  float: right;
 }
