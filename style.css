@@ -1,8 +1,8 @@
 body {
   font-family: sans-serif;
   background-color: #FFFAEB;
-  text-align: center;
   margin: 0;
+  text-align: center;
 }
 
 h1 {
@@ -15,7 +15,15 @@ h1 {
 #top-banner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #7D2D0A;
-  color: #FFFFFF;
+  color: #fff;
   padding: 15px 30px;
+  text-align: left;
+}
+
+#top-banner .right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }

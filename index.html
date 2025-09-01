@@ -4,24 +4,22 @@
     <meta charset="utf-8" />
     <title>My Website</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- React & ReactDOM from CDN -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <!-- For JSX support -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <!-- React will render here -->
     <div id="root"></div>
 
-    <!-- React code -->
-    <script type="text/babel">
+    <script type="text/babel" data-presets="env,react">
       function App() {
         return (
-          <div id="top-banner" className="items-center justify-center">
-            <h1 className="text-2xl font-bold left">Website</h1>
-            <div className="font-bold right">Settings</div>
-          </div>
+          <header id="top-banner">
+            <h1>Website</h1>
+            <div className="right">
+              <button type="button">Settings</button>
+            </div>
+          </header>
         );
       }
 
