@@ -12,6 +12,11 @@ h1 {
   margin: 0;
 }
 
+#root {
+  min-height: 100dvh;
+  display: flex;
+}
+
 #top-banner {
   display: flex;
   align-items: center;
@@ -42,6 +47,10 @@ h1 {
 
 .nav-button:hover {
   color: #FFFAEB;
+}
+
+#content {
+  flex: 1;
 }
 
 #bottom-banner {
