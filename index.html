@@ -1,14 +1,32 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <!-- React & ReactDOM from CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- For JSX support -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <div id="top-banner items-center justify-between">
-      <h1 className="navigation text-2xl font-bold left">Website</h1>
-      <div className="navigation font-bold right">Settings</div>
-    </div>
+    <!-- React will render here -->
+    <div id="root"></div>
+
+    <!-- React code -->
+    <script type="text/babel">
+      function App() {
+        return (
+          <div id="top-banner" className="items-center justify-between">
+            <h1 className="navigation text-2xl font-bold left">Website</h1>
+            <div className="navigation font-bold right">Settings</div>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
   </body>
 </html>

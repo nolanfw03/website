@@ -1,32 +1,22 @@
 body {
   font-family: sans-serif;
-  text-align: center;
+  text-align: center; /* optional; remove if you don’t want inner text centered by default */
+  margin: 0;          /* remove default body margins so the banner touches the edges */
 }
 
 h1 {
-  font-size: var(--text-2xl);
-  font-weight: var(--font-weight-medium);
-  line-height: 1.5;
+  font-size: var(--text-2xl, 1.5rem);
+  font-weight: var(--font-weight-medium, 700);
+  line-height: 1.2;
+  margin: 0; /* avoid extra vertical space in the banner */
 }
 
 #top-banner {
-  position: relative;
+  display: flex;                  /* <-- make it flex */
+  justify-content: space-between; /* left item to the left, right item to the right */
+  align-items: center;            /* vertical centering */
   width: 100%;
   background-color: #7D2D0A;
   color: #FFFFFF;
-  padding-top: 15px;
-  padding-right: 30px;
-  padding-bottom: 15px;
-  padding-left: 30px;
-  font-family: Arial, sans-serif;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
+  padding: 15px 30px;
 }
