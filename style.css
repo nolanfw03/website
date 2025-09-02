@@ -56,9 +56,9 @@ h1 {
 
 .card-button {
   background: transparent;
-  color: #7D2D0A;
+  color: #000;
   border: 0;
-  padding: 0;
+  padding: 15px 30px;
   margin: 0;
   cursor: pointer;
   display: inline;
@@ -67,7 +67,7 @@ h1 {
 }
 
 .card-button:hover {
-  color: #7B333E;
+  color: #7D2D0A;
 }
 
 #bottom-banner {
